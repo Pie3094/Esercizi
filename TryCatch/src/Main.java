@@ -12,6 +12,12 @@ public class Main {
             System.out.println("Il numero non è compreso, errore " + e);
         }
 
+        try {
+            charInt('a');
+        } catch (Exception e) {
+            System.out.println("Errore, non un numero");
+        }
+
     }
 
     static void controllo(int value, int max, int min) {
@@ -20,4 +26,9 @@ public class Main {
         } else throw new ArithmeticException();
     }
 
+    public static void charInt(char mioChar) throws Exception {
+        if (Character.isDigit(mioChar)) {
+            System.out.println(mioChar);
+        } else throw new Exception("Non è un carattere, errore");
+    }
 }
