@@ -8,8 +8,9 @@ public class es3 {
             System.out.println("Non puoi dividere per zero, errore " + e);
         }
     }
-    public static void divZero(int x){
+    public static int divZero(int x){
         int result = x / 0;
+        return result;
     }
 }
 
