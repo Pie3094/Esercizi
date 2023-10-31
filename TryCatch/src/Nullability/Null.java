@@ -3,7 +3,7 @@ package Nullability;
 public class Null {
     public static void main(String[] args) {
 
-        System.out.println(nonNull(null, 0));
+        System.out.println(nonNull(6, 0));
 
     }
 

@@ -40,5 +40,6 @@ public class autobox {
         char cha = z;
         return "I valori trasformati sono, Integer: " + ger + ", Double: " + doub + ", Character: " + cha;
     }
+
 }
 
