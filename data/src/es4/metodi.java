@@ -5,26 +5,27 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 public class metodi {
-    public static OffsetDateTime plusYear(OffsetDateTime ora) {
-        ora = ora.plusYears(1);
-        return ora;
+    public static OffsetDateTime parsed() {
+        return OffsetDateTime.parse("2023-03-01T13:00:00Z");
     }
 
-    public static OffsetDateTime minusMont(OffsetDateTime ora) {
-        ora = ora.minusMonths(1);
-        return ora;
+    public static OffsetDateTime plusYear() {
+        return parsed().plusYears(1);
     }
 
-    public static OffsetDateTime plusDay(OffsetDateTime ora) {
-        ora = ora.plusDays(1);
-        return ora;
+    public static OffsetDateTime minusMont() {
+        return parsed().minusMonths(1);
     }
-    public static String formatterItaly(OffsetDateTime ora) {
-        String ora1 = ora.format(DateTimeFormatter.ofPattern("dd MMMM yyyy", Locale.ITALY));
-        return ora1;
+
+    public static OffsetDateTime plusDay() {
+        return parsed().plusDays(1);
     }
-    public static String formatterEnglish(OffsetDateTime ora) {
-        String ora1 = ora.format(DateTimeFormatter.ofPattern("dd MMMM yyyy", Locale.ENGLISH));
-        return ora1;
+
+    public static String formatterItaly(Locale local) {
+        return parsed().format(DateTimeFormatter.ofPattern("dd MMMM yyyy").localizedBy(local));
+    }
+
+    public static String formatterEnglish(Locale local) {
+        return parsed().format(DateTimeFormatter.ofPattern("dd MMMM yyyy").localizedBy(local));
     }
 }

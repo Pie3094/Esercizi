@@ -6,23 +6,24 @@ import java.time.OffsetDateTime;
 
 public class metodi {
 
-    public static OffsetDateTime parsed(String data) {
-        return OffsetDateTime.parse(data);
-    }
 
     public static int getYear(OffsetDateTime data) {
-        return data.getYear();
+        int data1 = data.getYear();
+        return data1;
     }
 
     public static Month getMonth(OffsetDateTime data) {
-        return data.getMonth();
+        Month data1 = data.getMonth();
+        return data1;
     }
 
     public static int getDayOfMonth(OffsetDateTime data) {
-        return data.getDayOfMonth();
+        int data1 = data.getDayOfMonth();
+        return data1;
     }
 
     public static DayOfWeek getDayOfWeek(OffsetDateTime data) {
-        return data.getDayOfWeek();
+        DayOfWeek data1 = data.getDayOfWeek();
+        return data1;
     }
 }
